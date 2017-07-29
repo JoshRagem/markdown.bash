@@ -347,8 +347,8 @@ s/([^\\])`([^`]*)`/\1<code>\2<\/code>/g
 s/!\[(.*)\]\((.*) \"(.*)\"\)/<img alt=\"\1\" src=\"\2\" title=\"\3\" \/>/g # inline image with title
 s/!\[(.*)\]\((.*)\)/<img alt=\"\1\" src=\"\2\" \/>/g # inline image without title
 
-s/\[(.*)]\((.*) "(.*)"\)/<a href=\"\2\" title=\"\3\">\1<\/a>/g # inline link with title
-s/\[(.*)]\((.*)\)/<a href=\"\2\">\1<\/a>/g # inline link
+s/\[([^]]+)]\(([^)]+) "(.*)"\)/<a href=\"\2\" title=\"\3\">\1<\/a>/g # inline link with title
+s/\[([^]]+)]\(([^)]+)\)/<a href=\"\2\">\1<\/a>/g # inline link
 
 # special characters
 /&.+;/!s/&/\&amp;/g # ampersand
